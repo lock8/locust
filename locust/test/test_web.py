@@ -4,10 +4,13 @@ import csv
 import json
 import sys
 import traceback
+try:
+    from unittest import mock
+except ImportError:
+    import mock
 from six.moves import StringIO
 
 import requests
-import mock
 import gevent
 from gevent import wsgi
 
